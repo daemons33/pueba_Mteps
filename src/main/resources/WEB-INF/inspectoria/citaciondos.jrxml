@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="citacionuno" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="62054f16-5295-484b-a509-6a4b7f1fa577">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="codigo" class="java.lang.String"/>
+	<parameter name="empresa" class="java.lang.String"/>
+	<parameter name="nombreEmpleado" class="java.lang.String"/>
+	<parameter name="direccionEmpleado" class="java.lang.String"/>
+	<parameter name="direccionEmpresa" class="java.lang.String"/>
+	<parameter name="tipo" class="java.lang.String"/>
+	<parameter name="fecha" class="java.lang.String"/>
+	<parameter name="hora" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<detail>
+		<band height="752" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement mode="Transparent" x="1" y="280" width="445" height="59" uuid="f1cb763e-8491-4a7f-8352-06484d822890"/>
+			</rectangle>
+			<image>
+				<reportElement x="1" y="10" width="190" height="50" uuid="234650ac-4ccc-4f3d-a6f0-42e5275be0eb">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA["WEB-INF/tramites/Logo2.png"]]></imageExpression>
+			</image>
+			<rectangle radius="10">
+				<reportElement mode="Transparent" x="0" y="0" width="569" height="339" uuid="5e9081d4-1bb3-4be7-ae86-1ea093604553"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="320" y="0" width="249" height="44" uuid="7d0bffe4-8e50-4e18-a709-9e19f901e7d6"/>
+				<textElement>
+					<font size="33"/>
+				</textElement>
+				<text><![CDATA[2da. CITACIÓN]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="68" width="568" height="1" uuid="b28b2fe4-96ea-4043-9552-7d8790ba7255"/>
+			</line>
+			<rectangle radius="7">
+				<reportElement mode="Transparent" x="210" y="39" width="140" height="24" uuid="d4cd6157-2442-455c-9830-d55c18dd3179"/>
+			</rectangle>
+			<rectangle radius="7">
+				<reportElement mode="Transparent" x="370" y="39" width="190" height="24" uuid="74e45924-8ec5-495f-8d17-604a5e5c9b40"/>
+			</rectangle>
+			<textField pattern="EEEEE, dd-MM-yyyy">
+				<reportElement x="220" y="45" width="120" height="15" uuid="598be756-7b11-4cb1-9230-f6b9f06a141a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="8" y="280" width="438" height="58" uuid="f746a5c3-dd06-492c-92cd-221536e7a2f6"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Decreto Ley No. 2763 de 2 de octubre de 1951.
+ARTICULO 14.-
+Se sancionará igualmente sujetándose el procedimiento, y con una multa proporcional, todo acto de omisión que perturbe, perjudique, impida o dilate el servicio del Ministerio de Trabajo, Empleo y Previsión Social y sus dependencias, ya sea negando o tergiversando las informaciones que se solicitaren, desacatando sus resoluciones o de cualquier otro modo.]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement mode="Transparent" x="460" y="216" width="100" height="100" uuid="71e1c0cb-1748-4893-b21b-0b25fc5cb123">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</ellipse>
+			<line>
+				<reportElement x="1" y="369" width="568" height="1" uuid="d7f4f15b-9d02-4310-802a-0bc82a7937fe"/>
+			</line>
+			<textField>
+				<reportElement x="10" y="80" width="545" height="200" uuid="9febf171-c007-4986-a417-5121de69887e"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA["Señor (a):\n"+
+$P{empresa}+"\n"+
+"Presente.-\n\n"+
+"No habiéndose hecho presente a la primera citación emitida por este Ministerio, una vez mas se cita a Ud. apersonarse en estas oficinas el día "+ $P{fecha} +" a Hrs. "+ $P{hora} +" a objeto de atender la demanda interpuesta por su trabajador (a) o empleado(a) o ex-trabajador (a) o ex-empleado (a) " +$P{nombreEmpleado}+", por " +$P{tipo}+".\n"+
+ 
+"Así mismo, debo recordarle que el incumplimiento a la presente citación, constituye desacato sancionado por el artículo 14 del D.L. 2763 de 2 de octubre de 1951.\n"+
+"Atentamente,"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="373" y="44" width="182" height="18" uuid="2ff0047f-22ef-4809-8369-75d6656b831b"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{codigo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="220" width="436" height="60" uuid="e8b635f0-6729-4fc6-b4d7-100c4070f003"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA["Dirección del denunciado: "+$P{direccionEmpresa} + "\n"+
+"Dirección del denunciante: "+$P{direccionEmpleado}+""]]></textFieldExpression>
+			</textField>
+			<rectangle radius="10">
+				<reportElement mode="Transparent" x="3" y="681" width="445" height="59" uuid="5f6cc75b-5b69-420c-8a57-3ea1afccd5ba"/>
+			</rectangle>
+			<image>
+				<reportElement x="3" y="411" width="190" height="50" uuid="caa64ac8-8127-4fb5-86f8-53bba741ff85">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA["WEB-INF/tramites/Logo2.png"]]></imageExpression>
+			</image>
+			<rectangle radius="10">
+				<reportElement mode="Transparent" x="2" y="401" width="569" height="339" uuid="003b8081-12c8-4a0e-92e8-9a70e852345f"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="322" y="401" width="249" height="44" uuid="cd8591ee-8ab3-4bf5-ae6f-184431c3c730"/>
+				<textElement>
+					<font size="33"/>
+				</textElement>
+				<text><![CDATA[2da. CITACIÓN]]></text>
+			</staticText>
+			<line>
+				<reportElement x="2" y="469" width="568" height="1" uuid="ed08ffcd-e0ed-4aa0-8dcc-034cb4e83e50"/>
+			</line>
+			<rectangle radius="7">
+				<reportElement mode="Transparent" x="212" y="440" width="140" height="24" uuid="b1c35008-f930-475e-b4e3-bf3d8b59c8e2"/>
+			</rectangle>
+			<rectangle radius="7">
+				<reportElement mode="Transparent" x="372" y="440" width="190" height="24" uuid="6564fec4-e8de-4fb8-b399-90dc24e1e555"/>
+			</rectangle>
+			<textField pattern="EEEEE, dd-MM-yyyy">
+				<reportElement x="222" y="446" width="120" height="15" uuid="d6f86c3b-e941-4a9b-b585-5f41d6bebc22">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="681" width="438" height="58" uuid="d362e651-2855-43d2-bc25-afd2c314cbe5"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Decreto Ley No. 2763 de 2 de octubre de 1951.
+ARTICULO 14.-
+Se sancionará igualmente sujetándose el procedimiento, y con una multa proporcional, todo acto de omisión que perturbe, perjudique, impida o dilate el servicio del Ministerio de Trabajo, Empleo y Previsión Social y sus dependencias, ya sea negando o tergiversando las informaciones que se solicitaren, desacatando sus resoluciones o de cualquier otro modo.]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement mode="Transparent" x="462" y="617" width="100" height="100" uuid="93baec4c-9659-4c52-abbe-ba78a6527637">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</ellipse>
+			<textField>
+				<reportElement x="12" y="481" width="545" height="200" uuid="6e3ffc0d-b136-46ac-8bee-2f78d44c5a2e"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA["Señor (a):\n"+
+$P{empresa}+"\n"+
+"Presente.-\n\n"+
+"No habiéndose hecho presente a la primera citación emitida por este Ministerio, una vez mas se cita a Ud. apersonarse en estas oficinas el día "+ $P{fecha} +" a Hrs. "+ $P{hora} +" a objeto de atender la demanda interpuesta por su trabajador (a) o empleado(a) o ex-trabajador (a) o ex-empleado (a) " +$P{nombreEmpleado}+", por " +$P{tipo}+".\n"+
+ 
+"Así mismo, debo recordarle que el incumplimiento a la presente citación, constituye desacato sancionado por el artículo 14 del D.L. 2763 de 2 de octubre de 1951.\n"+
+"Atentamente,"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="375" y="445" width="182" height="18" uuid="31acdd61-bf85-4463-9493-0a93aedac3d6"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{codigo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="12" y="621" width="436" height="60" uuid="86b00322-f313-4603-b568-5967ffbf2be3"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA["Dirección del denunciado: "+$P{direccionEmpresa} + "\n"+
+"Dirección del denunciante: "+$P{direccionEmpleado}+""]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

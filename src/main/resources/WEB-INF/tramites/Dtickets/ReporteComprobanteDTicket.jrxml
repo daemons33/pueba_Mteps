@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reporteComiteMixto" pageWidth="612" pageHeight="792" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3ae545f9-b91f-4f2e-ade0-a10206cb3d2b">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="tipoTramite" class="java.lang.String"/>
+	<parameter name="codigo" class="java.lang.String"/>
+	<parameter name="fecha" class="java.lang.String"/>
+	<parameter name="hora" class="java.lang.String"/>
+	<parameter name="gestion" class="java.lang.String"/>
+	<parameter name="nroTramites" class="java.lang.String"/>
+	<parameter name="nombre" class="java.lang.String"/>
+	<parameter name="departamento" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="572" splitType="Stretch">
+			<image>
+				<reportElement stretchType="ContainerHeight" x="169" y="103" width="234" height="70" uuid="1590b98b-37f8-48e9-a374-720420033fc4">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA["WEB-INF/tramites/Logo2.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="181" y="51" width="210" height="40" forecolor="#71AD40" backcolor="#71AD40" uuid="225fb89d-741f-41d3-b4fc-d6074ff8365c"/>
+				<textElement textAlignment="Center">
+					<font size="26"/>
+				</textElement>
+				<textFieldExpression><![CDATA["D-TICKET"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="290" y="259" width="180" height="30" uuid="103e5149-59b2-49f4-8ef2-329ddb6a7b5e"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fecha} + " " +$P{hora}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="290" y="283" width="180" height="30" uuid="89f80eda-c95d-400d-b74a-edf234441058"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{departamento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="290" y="313" width="180" height="30" uuid="f7376645-55c5-46b1-90e0-390eb4c2aee5"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nroTramites}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="290" y="349" width="180" height="59" uuid="7081288a-c1f3-43ce-b8cb-38baf6b18818"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nombre}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Opaque" x="290" y="193" width="180" height="30" forecolor="#689F38" backcolor="#689F38" uuid="47cad6fe-95a1-4039-bb5b-02ab79417890"/>
+			</rectangle>
+			<textField>
+				<reportElement x="290" y="198" width="180" height="30" forecolor="#FFFFFF" backcolor="#71AD40" uuid="0abe7c32-170f-4843-877a-8d5b82e63546"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tipoTramite}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="80" y="91" width="400" height="1" forecolor="#999393" uuid="6b306b92-c438-4488-88ef-818adae623f4">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="80" y="41" width="400" height="1" forecolor="#999393" uuid="f804534c-b401-49a0-ae30-1940f890d624">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="80" y="173" width="400" height="1" forecolor="#999393" uuid="0036843b-78b6-4efc-b9da-5096e3d00dab">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="120" y="193" width="150" height="30" uuid="8b0fc576-c57f-4c5f-9303-e368291c1dae"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Trámite:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="223" width="150" height="30" uuid="f5d0cbbb-833d-4033-9d86-9776cad50a47"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Nro. de Ticket:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="259" width="150" height="30" uuid="74c69d31-bdfe-4df5-a85e-fce8d60efcee"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Fecha y hora de atención:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="283" width="150" height="30" uuid="e938ebf9-7362-4c7e-bfdf-1f2fe864385d"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Departamento:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="313" width="150" height="30" uuid="e242619a-39c2-4aef-8f95-826ed5e5512d"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Nº de trámites:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="343" width="150" height="30" uuid="58954b8b-567e-41a0-89d0-b2edc46a7a08"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Nombre o Razón Social:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="290" y="223" width="180" height="30" uuid="153b1fdd-ba37-4285-85f2-0d9daf2a044c"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{codigo}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="80" y="411" width="400" height="1" forecolor="#999393" uuid="8260421c-6e73-43f3-b6ad-e880fb55300d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="90" y="415" width="379" height="50" uuid="332efaa6-45b2-4339-b469-f339efe62992"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Advertencia: El presente ticket de atención tiene vigencia solo hasta la fecha y hora indicada, pasado el mismo deberá realizar una nueva solicitud.]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

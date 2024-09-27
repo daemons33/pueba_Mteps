@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cuartointermedio" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="62054f16-5295-484b-a509-6a4b7f1fa577">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="codigo" class="java.lang.String"/>
+	<parameter name="empresa" class="java.lang.String"/>
+	<parameter name="nombreEmpleado" class="java.lang.String"/>
+	<parameter name="direccionEmpleado" class="java.lang.String"/>
+	<parameter name="direccionEmpresa" class="java.lang.String"/>
+	<parameter name="tipo" class="java.lang.String"/>
+	<parameter name="fecha" class="java.lang.String"/>
+	<parameter name="hora" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<detail>
+		<band height="752" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement mode="Transparent" x="1" y="6" width="569" height="349" uuid="5e9081d4-1bb3-4be7-ae86-1ea093604553"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="11" y="94" width="550" height="230" uuid="eec8c057-ca54-40f8-bf63-1fe7f06837be"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Señor (a):
+
+Presente.-
+A objeto de responder a la demanda interpuesta por su trabajador (a) o empleado (a), o ex-trabajador (a) o ex-empleado (a)
+sobre 
+
+Se ingresa en cuarto intermedio definido en el Ministerio de Trabajo, Empleo y Previsión Social.
+Hasta:
+Horas:
+Cabe recordarle que el incumplimiento a la presente citación constituye desacato
+sancionado por Ley.
+Atentamente.
+Dirección del denunciado:
+
+Dirección del denunciante:]]></text>
+			</staticText>
+			<image>
+				<reportElement x="2" y="24" width="190" height="50" uuid="234650ac-4ccc-4f3d-a6f0-42e5275be0eb">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA["WEB-INF/tramites/Logo2.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="201" y="14" width="361" height="44" uuid="7d0bffe4-8e50-4e18-a709-9e19f901e7d6"/>
+				<textElement>
+					<font size="33"/>
+				</textElement>
+				<text><![CDATA[CUARTO INTERMEDIO]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="82" width="568" height="1" uuid="b28b2fe4-96ea-4043-9552-7d8790ba7255"/>
+			</line>
+			<rectangle radius="7">
+				<reportElement mode="Transparent" x="211" y="53" width="140" height="24" uuid="d4cd6157-2442-455c-9830-d55c18dd3179"/>
+			</rectangle>
+			<rectangle radius="7">
+				<reportElement mode="Transparent" x="371" y="53" width="190" height="24" uuid="74e45924-8ec5-495f-8d17-604a5e5c9b40"/>
+			</rectangle>
+			<textField pattern="EEEEE, dd-MM-yyyy">
+				<reportElement x="221" y="59" width="170" height="15" uuid="598be756-7b11-4cb1-9230-f6b9f06a141a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="378" y="59" width="100" height="23" uuid="6cf9ee5e-9d2b-497d-b5dd-749ba9d1e6c3"/>
+				<text><![CDATA[Código:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="324" width="539" height="31" uuid="f746a5c3-dd06-492c-92cd-221536e7a2f6"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[* Se recuerda a las empresas que el reempadronamiento es obligatorio Favor solicitar el formulario gratuito en Ventanilla Única
+Las empresas ya empadronadas favor retirar su "Certificado de Empleador" respectivo del Viceministerio de Relaciones Laboral]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement mode="Transparent" x="461" y="224" width="100" height="100" uuid="71e1c0cb-1748-4893-b21b-0b25fc5cb123">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</ellipse>
+			<textField>
+				<reportElement x="416" y="59" width="145" height="30" uuid="6d03f7ed-4331-49eb-bdb0-17fc8364639b"/>
+				<textFieldExpression><![CDATA[$P{codigo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="11" y="108" width="550" height="30" uuid="60da8550-9772-4186-9708-6d73e0764ab5"/>
+				<textFieldExpression><![CDATA[$P{empresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="137" width="439" height="29" uuid="40403ba2-cccc-4178-91c4-1467587ef53d"/>
+				<textElement textAlignment="Left">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nombreEmpleado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="141" y="286" width="320" height="30" uuid="0fe2eda9-5232-472c-a675-9394b4fb1698"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{direccionEmpleado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="141" y="257" width="320" height="30" uuid="4108ae57-b7e7-4262-aff4-f53d86dc3416"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{direccionEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="44" y="158" width="497" height="25" uuid="7da26fd4-7096-483b-a9f6-e1c2abec4b9d"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tipo}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="1" y="366" width="568" height="1" uuid="d7f4f15b-9d02-4310-802a-0bc82a7937fe"/>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="47" y="197" width="145" height="15" uuid="63083d84-25ab-43df-8ef5-db9aec12bd99"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="47" y="210" width="145" height="20" uuid="d852d58e-5523-4e5b-bfed-7e629a476d99"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{hora}]]></textFieldExpression>
+			</textField>
+			<rectangle radius="10">
+				<reportElement mode="Transparent" x="1" y="380" width="569" height="349" uuid="02ea96f9-f958-4ad6-b81a-1b195009a658"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="11" y="468" width="550" height="230" uuid="cf71ebd4-7f54-41ab-bb83-3fafb001798e"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Señor (a):
+
+Presente.-
+A objeto de responder a la demanda interpuesta por su trabajador (a) o empleado (a), o ex-trabajador (a) o ex-empleado (a)
+sobre 
+
+Se ingresa en cuarto intermedio definido en el Ministerio de Trabajo, Empleo y Previsión Social.
+Hasta:
+Horas:
+Cabe recordarle que el incumplimiento a la presente citación constituye desacato
+sancionado por Ley.
+Atentamente.
+Dirección del denunciado:
+
+Dirección del denunciante:]]></text>
+			</staticText>
+			<image>
+				<reportElement x="2" y="398" width="190" height="50" uuid="8a3e386b-5e83-4c8c-bbd2-7c21e0168a59">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA["WEB-INF/tramites/Logo2.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="201" y="388" width="361" height="44" uuid="d118e92d-a2c6-4069-bd7d-37752788e5d0"/>
+				<textElement>
+					<font size="33"/>
+				</textElement>
+				<text><![CDATA[CUARTO INTERMEDIO]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="456" width="568" height="1" uuid="d1562a94-8e91-4de9-b730-78518bd380dd"/>
+			</line>
+			<rectangle radius="7">
+				<reportElement mode="Transparent" x="211" y="427" width="140" height="24" uuid="81af13a8-be8f-41de-9411-e778d5c20224"/>
+			</rectangle>
+			<rectangle radius="7">
+				<reportElement mode="Transparent" x="371" y="427" width="190" height="24" uuid="1071749c-913a-4f8f-b2d9-c575182c1542"/>
+			</rectangle>
+			<textField pattern="EEEEE, dd-MM-yyyy">
+				<reportElement x="221" y="433" width="170" height="15" uuid="ce446de4-ac4c-4523-9450-27ffc76cf3d1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="378" y="433" width="100" height="23" uuid="0f6d8f7c-326c-4c4e-803a-8934636a084b"/>
+				<text><![CDATA[Código:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="698" width="539" height="31" uuid="917087fe-5675-4aac-8d65-44be2267aad1"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[* Se recuerda a las empresas que el reempadronamiento es obligatorio Favor solicitar el formulario gratuito en Ventanilla Única
+Las empresas ya empadronadas favor retirar su "Certificado de Empleador" respectivo del Viceministerio de Relaciones Laboral]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement mode="Transparent" x="461" y="598" width="100" height="100" uuid="bddd40d3-e6ed-4cc2-8b89-c0aa16a97091">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</ellipse>
+			<textField>
+				<reportElement x="416" y="433" width="145" height="30" uuid="2034a7f3-3d22-4cfd-93f0-07bafcab7bb0"/>
+				<textFieldExpression><![CDATA[$P{codigo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="11" y="482" width="550" height="30" uuid="5dbd0d73-0304-4bb5-bd4c-b5f91a9cc4a2"/>
+				<textFieldExpression><![CDATA[$P{empresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="76" y="510" width="439" height="29" uuid="ae3072ad-0351-4f08-b73b-085ec311c4cc"/>
+				<textElement textAlignment="Left">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nombreEmpleado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="141" y="660" width="320" height="30" uuid="4f05247f-dab5-4117-85fc-6ca9c3c3d535"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{direccionEmpleado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="141" y="631" width="320" height="30" uuid="16af47a8-42f4-4a54-885f-c02d35ed0828"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{direccionEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="44" y="532" width="497" height="25" uuid="d230adfe-8b87-4a2a-b04e-2f21fb36877f"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tipo}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="47" y="571" width="145" height="15" uuid="92470c22-f72c-4fc4-98e6-c67cd6ea440d"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="47" y="584" width="145" height="20" uuid="975e5f2b-f9f4-4174-9221-2df8983912a9"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{hora}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

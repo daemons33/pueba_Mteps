@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="citacionuno" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="62054f16-5295-484b-a509-6a4b7f1fa577">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<subDataset name="detalleSolicitud" uuid="a77a0c41-513a-41c0-a596-365d8fa4387a">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<parameter name="codigo" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<detail>
+		<band height="752" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement mode="Transparent" x="2" y="0" width="569" height="680" uuid="5e9081d4-1bb3-4be7-ae86-1ea093604553"/>
+			</rectangle>
+			<image>
+				<reportElement x="470" y="10" width="70" height="90" uuid="234650ac-4ccc-4f3d-a6f0-42e5275be0eb">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA["WEB-INF/logo.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="132" y="16" width="308" height="44" uuid="7d0bffe4-8e50-4e18-a709-9e19f901e7d6"/>
+				<textElement>
+					<font size="25"/>
+				</textElement>
+				<text><![CDATA[CERTIFICACIÓN POA]]></text>
+			</staticText>
+			<line>
+				<reportElement x="2" y="170" width="568" height="1" uuid="b28b2fe4-96ea-4043-9552-7d8790ba7255"/>
+			</line>
+			<textField>
+				<reportElement x="20" y="80" width="171" height="20" uuid="3d8f93c3-7a02-47f5-93fb-7a2ebada75b9"/>
+				<textFieldExpression><![CDATA["Código: "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="21" y="101" width="171" height="20" uuid="473f68ef-32f1-475a-b556-d45c42d28b9d"/>
+				<textFieldExpression><![CDATA["Fecha de Registro: "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="21" y="120" width="171" height="20" uuid="13696ef2-a5fb-4d7e-b453-f9c47473e5df"/>
+				<textFieldExpression><![CDATA["Fecha de Solicitud: "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="21" y="140" width="171" height="20" uuid="405be371-d584-408a-8be3-62ffcf37ed77"/>
+				<textFieldExpression><![CDATA["Fecha de Aprobación: "]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

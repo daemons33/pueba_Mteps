@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reporteComiteMixto" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3ae545f9-b91f-4f2e-ade0-a10206cb3d2b">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="nombre" class="java.lang.String"/>
+	<parameter name="empresa" class="java.lang.String"/>
+	<parameter name="dia" class="java.lang.String"/>
+	<parameter name="mes" class="java.lang.String"/>
+	<parameter name="gestion" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="572" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="756" height="572" uuid="1590b98b-37f8-48e9-a374-720420033fc4"/>
+				<imageExpression><![CDATA["WEB-INF/sscdyd/fondo.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="275" y="400" width="203" height="126" uuid="3a7b118c-472c-446f-8285-9f2d631cda72"/>
+				<imageExpression><![CDATA["WEB-INF/comiteMixto/firma.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="108" y="274" width="562" height="46" uuid="e494cb27-8c5e-4917-b405-b522f9fa351d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="25"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="291" y="315" width="450" height="30" uuid="0abe7c32-170f-4843-877a-8d5b82e63546"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{empresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="194" y="389" width="40" height="30" uuid="8e5cfc1d-1493-4f01-82f5-d1089a58591f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{dia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="252" y="389" width="83" height="30" uuid="e1b91450-edf9-487c-a7e0-96213f72bed9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{mes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="336" y="389" width="83" height="30" uuid="7e10e108-dda1-4b21-9c3a-cf63f05aada2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{gestion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

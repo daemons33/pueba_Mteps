@@ -1,0 +1,800 @@
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServicioExternoInstitucion" targetNamespace="http://tempuri.org/">
+<wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+<xs:import namespace="http://schemas.datacontract.org/2004/07/Convenio.Core.Modelo.Dto.Proceso.ServicioExterno"/>
+<xs:element name="ConsultaDatoPersonaCertificacion">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="pCodigoInstitucion" type="xs:int"/>
+<xs:element minOccurs="0" name="pUsuario" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pContrasenia" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pClaveAccesoUsuarioFinal" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pNumeroAutorizacion" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pNumeroDocumento" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pComplemento" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pNombre" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pPrimerApellido" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pSegundoApellido" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pFechaNacimiento" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="ConsultaDatoPersonaCertificacionResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Convenio.Core.Modelo.Dto.Proceso.ServicioExterno" minOccurs="0" name="ConsultaDatoPersonaCertificacionResult" nillable="true" type="q1:RespuestaConsultaCertificacion"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="ConsultaDatoPersonaEnJson">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="pCodigoInstitucion" type="xs:int"/>
+<xs:element minOccurs="0" name="pUsuario" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pContrasenia" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pClaveAccesoUsuarioFinal" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pNumeroAutorizacion" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pNumeroDocumento" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pComplemento" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pNombre" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pPrimerApellido" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pSegundoApellido" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pFechaNacimiento" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="ConsultaDatoPersonaEnJsonResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Convenio.Core.Modelo.Dto.Proceso.ServicioExterno" minOccurs="0" name="ConsultaDatoPersonaEnJsonResult" nillable="true" type="q2:RespuestaConsultaJson"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="ConsultaDatoPersonaContrastacion">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="pCodigoInstitucion" type="xs:int"/>
+<xs:element minOccurs="0" name="pUsuario" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pContrasenia" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pClaveAccesoUsuarioFinal" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pNumeroAutorizacion" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pListaCampo" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pTipoPersona" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="ConsultaDatoPersonaContrastacionResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Convenio.Core.Modelo.Dto.Proceso.ServicioExterno" minOccurs="0" name="ConsultaDatoPersonaContrastacionResult" nillable="true" type="q3:RespuestaConsultaContrastacion"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="VerificacionImagenDocumentoCi">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="pCodigoInstitucion" type="xs:int"/>
+<xs:element minOccurs="0" name="pNombreUsuario" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pContrasenia" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pClaveAccesoUsuarioFinal" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pNumeroAutorizacion" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pCodigoUnico" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pNumeroDocumento" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="VerificacionImagenDocumentoCiResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Convenio.Core.Modelo.Dto.Proceso.ServicioExterno" minOccurs="0" name="VerificacionImagenDocumentoCiResult" nillable="true" type="q4:RespuestaVerificacion"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="VerificacionImagenDocumentoCie">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="pCodigoInstitucion" type="xs:int"/>
+<xs:element minOccurs="0" name="pNombreUsuario" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pContrasenia" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pClaveAccesoUsuarioFinal" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pNumeroAutorizacion" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pCodigoUnico" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pNumeroDocumento" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="VerificacionImagenDocumentoCieResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Convenio.Core.Modelo.Dto.Proceso.ServicioExterno" minOccurs="0" name="VerificacionImagenDocumentoCieResult" nillable="true" type="q5:RespuestaVerificacion"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="VerificacionImagenDocumentoLic">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="pCodigoInstitucion" type="xs:int"/>
+<xs:element minOccurs="0" name="pNombreUsuario" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pContrasenia" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pClaveAccesoUsuarioFinal" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pNumeroAutorizacion" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pCodigoUnico" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pNumeroLicencia" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="VerificacionImagenDocumentoLicResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Convenio.Core.Modelo.Dto.Proceso.ServicioExterno" minOccurs="0" name="VerificacionImagenDocumentoLicResult" nillable="true" type="q6:RespuestaVerificacion"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="VerificacionImagenDocumentoLice">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="pCodigoInstitucion" type="xs:int"/>
+<xs:element minOccurs="0" name="pNombreUsuario" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pContrasenia" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pClaveAccesoUsuarioFinal" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pNumeroAutorizacion" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pCodigoUnico" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pNumeroLicencia" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="VerificacionImagenDocumentoLiceResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Convenio.Core.Modelo.Dto.Proceso.ServicioExterno" minOccurs="0" name="VerificacionImagenDocumentoLiceResult" nillable="true" type="q7:RespuestaVerificacion"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="VerificacionDatoDocumentoCi">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="pCodigoInstitucion" type="xs:int"/>
+<xs:element minOccurs="0" name="pNombreUsuario" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pContrasenia" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pClaveAccesoUsuarioFinal" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pNumeroAutorizacion" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pNumeroDocumento" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pComplemento" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pNombres" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pPrimerApellido" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pSegundoApellido" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pFechaNacimiento" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="VerificacionDatoDocumentoCiResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Convenio.Core.Modelo.Dto.Proceso.ServicioExterno" minOccurs="0" name="VerificacionDatoDocumentoCiResult" nillable="true" type="q8:RespuestaVerificacion"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="VerificacionDatoDocumentoCie">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="pCodigoInstitucion" type="xs:int"/>
+<xs:element minOccurs="0" name="pNombreUsuario" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pContrasenia" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pClaveAccesoUsuarioFinal" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pNumeroAutorizacion" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pNumeroDocumento" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pComplemento" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pNombres" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pPrimerApellido" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pSegundoApellido" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pFechaNacimiento" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="VerificacionDatoDocumentoCieResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Convenio.Core.Modelo.Dto.Proceso.ServicioExterno" minOccurs="0" name="VerificacionDatoDocumentoCieResult" nillable="true" type="q9:RespuestaVerificacion"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="VerificacionDatoDocumentoLic">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="pCodigoInstitucion" type="xs:int"/>
+<xs:element minOccurs="0" name="pNombreUsuario" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pContrasenia" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pClaveAccesoUsuarioFinal" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pNumeroAutorizacion" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pNumeroLicencia" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pCategoriaLicencia" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pNombres" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pPrimerApellido" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pSegundoApellido" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pFechaNacimiento" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="VerificacionDatoDocumentoLicResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Convenio.Core.Modelo.Dto.Proceso.ServicioExterno" minOccurs="0" name="VerificacionDatoDocumentoLicResult" nillable="true" type="q10:RespuestaVerificacion"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="VerificacionDatoDocumentoLice">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="pCodigoInstitucion" type="xs:int"/>
+<xs:element minOccurs="0" name="pNombreUsuario" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pContrasenia" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pClaveAccesoUsuarioFinal" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pNumeroAutorizacion" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pNumeroLicencia" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pCategoriaLicencia" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pNombres" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pPrimerApellido" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pSegundoApellido" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pFechaNacimiento" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="VerificacionDatoDocumentoLiceResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Convenio.Core.Modelo.Dto.Proceso.ServicioExterno" minOccurs="0" name="VerificacionDatoDocumentoLiceResult" nillable="true" type="q11:RespuestaVerificacion"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="VerificacionDatoImagenDocumentoCi">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="pCodigoInstitucion" type="xs:int"/>
+<xs:element minOccurs="0" name="pNombreUsuario" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pContrasenia" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pClaveAccesoUsuarioFinal" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pNumeroAutorizacion" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pCodigoUnico" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pNumeroDocumento" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pComplemento" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pNombres" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pPrimerApellido" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pSegundoApellido" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pFechaNacimiento" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="VerificacionDatoImagenDocumentoCiResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Convenio.Core.Modelo.Dto.Proceso.ServicioExterno" minOccurs="0" name="VerificacionDatoImagenDocumentoCiResult" nillable="true" type="q12:RespuestaVerificacion"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="VerificacionDatoImagenDocumentoCie">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="pCodigoInstitucion" type="xs:int"/>
+<xs:element minOccurs="0" name="pNombreUsuario" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pContrasenia" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pClaveAccesoUsuarioFinal" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pNumeroAutorizacion" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pCodigoUnico" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pNumeroDocumento" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pComplemento" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pNombres" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pPrimerApellido" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pSegundoApellido" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pFechaNacimiento" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="VerificacionDatoImagenDocumentoCieResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Convenio.Core.Modelo.Dto.Proceso.ServicioExterno" minOccurs="0" name="VerificacionDatoImagenDocumentoCieResult" nillable="true" type="q13:RespuestaVerificacion"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="VerificacionDatoImagenDocumentoLic">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="pCodigoInstitucion" type="xs:int"/>
+<xs:element minOccurs="0" name="pNombreUsuario" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pContrasenia" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pClaveAccesoUsuarioFinal" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pNumeroAutorizacion" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pCodigoUnico" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pNumeroLicencia" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pCategoriaLicencia" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pNombres" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pPrimerApellido" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pSegundoApellido" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pFechaNacimiento" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="VerificacionDatoImagenDocumentoLicResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Convenio.Core.Modelo.Dto.Proceso.ServicioExterno" minOccurs="0" name="VerificacionDatoImagenDocumentoLicResult" nillable="true" type="q14:RespuestaVerificacion"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="VerificacionDatoImagenDocumentoLice">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="pCodigoInstitucion" type="xs:int"/>
+<xs:element minOccurs="0" name="pNombreUsuario" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pContrasenia" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pClaveAccesoUsuarioFinal" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pNumeroAutorizacion" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pCodigoUnico" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pNumeroLicencia" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pCategoriaLicencia" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pNombres" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pPrimerApellido" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pSegundoApellido" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pFechaNacimiento" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="VerificacionDatoImagenDocumentoLiceResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Convenio.Core.Modelo.Dto.Proceso.ServicioExterno" minOccurs="0" name="VerificacionDatoImagenDocumentoLiceResult" nillable="true" type="q15:RespuestaVerificacion"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="ObtenerDocumentoPorCodigoUnico">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="pCodigoInstitucion" type="xs:int"/>
+<xs:element minOccurs="0" name="pNombreUsuario" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pContrasenia" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pClaveAccesoUsuarioFinal" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pNumeroUnicoDocumento" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="ObtenerDocumentoPorCodigoUnicoResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Convenio.Core.Modelo.Dto.Proceso.ServicioExterno" minOccurs="0" name="ObtenerDocumentoPorCodigoUnicoResult" nillable="true" type="q16:RespuestaDocumento"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:schema>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/">
+<xs:element name="anyType" nillable="true" type="xs:anyType"/>
+<xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+<xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+<xs:element name="boolean" nillable="true" type="xs:boolean"/>
+<xs:element name="byte" nillable="true" type="xs:byte"/>
+<xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+<xs:element name="decimal" nillable="true" type="xs:decimal"/>
+<xs:element name="double" nillable="true" type="xs:double"/>
+<xs:element name="float" nillable="true" type="xs:float"/>
+<xs:element name="int" nillable="true" type="xs:int"/>
+<xs:element name="long" nillable="true" type="xs:long"/>
+<xs:element name="QName" nillable="true" type="xs:QName"/>
+<xs:element name="short" nillable="true" type="xs:short"/>
+<xs:element name="string" nillable="true" type="xs:string"/>
+<xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+<xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+<xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+<xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+<xs:element name="char" nillable="true" type="tns:char"/>
+<xs:simpleType name="char">
+<xs:restriction base="xs:int"/>
+</xs:simpleType>
+<xs:element name="duration" nillable="true" type="tns:duration"/>
+<xs:simpleType name="duration">
+<xs:restriction base="xs:duration">
+<xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+<xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+<xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:element name="guid" nillable="true" type="tns:guid"/>
+<xs:simpleType name="guid">
+<xs:restriction base="xs:string">
+<xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:attribute name="FactoryType" type="xs:QName"/>
+<xs:attribute name="Id" type="xs:ID"/>
+<xs:attribute name="Ref" type="xs:IDREF"/>
+</xs:schema>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Convenio.Core.Modelo.Dto.Proceso.ServicioExterno" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Convenio.Core.Modelo.Dto.Proceso.ServicioExterno">
+<xs:import namespace="http://schemas.datacontract.org/2004/07/Framework.Comun.Resultado"/>
+<xs:complexType name="RespuestaConsultaCertificacion">
+<xs:complexContent mixed="false">
+<xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Framework.Comun.Resultado" base="q1:ResultadoExterno">
+<xs:sequence>
+<xs:element minOccurs="0" name="ReporteCertificacion" nillable="true" type="xs:base64Binary"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:element name="RespuestaConsultaCertificacion" nillable="true" type="tns:RespuestaConsultaCertificacion"/>
+<xs:complexType name="RespuestaConsultaJson">
+<xs:complexContent mixed="false">
+<xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Framework.Comun.Resultado" base="q2:ResultadoExterno">
+<xs:sequence>
+<xs:element minOccurs="0" name="DatosPersonaEnFormatoJson" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Fotografia" nillable="true" type="xs:base64Binary"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:element name="RespuestaConsultaJson" nillable="true" type="tns:RespuestaConsultaJson"/>
+<xs:complexType name="RespuestaConsultaContrastacion">
+<xs:complexContent mixed="false">
+<xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Framework.Comun.Resultado" base="q3:ResultadoExterno">
+<xs:sequence>
+<xs:element minOccurs="0" name="ContrastacionEnFormatoJson" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:element name="RespuestaConsultaContrastacion" nillable="true" type="tns:RespuestaConsultaContrastacion"/>
+<xs:complexType name="RespuestaVerificacion">
+<xs:complexContent mixed="false">
+<xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Framework.Comun.Resultado" base="q4:ResultadoExterno">
+<xs:sequence>
+<xs:element minOccurs="0" name="Reporte" nillable="true" type="xs:base64Binary"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:element name="RespuestaVerificacion" nillable="true" type="tns:RespuestaVerificacion"/>
+<xs:complexType name="RespuestaDocumento">
+<xs:complexContent mixed="false">
+<xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/Framework.Comun.Resultado" base="q5:BaseResultado">
+<xs:sequence>
+<xs:element minOccurs="0" name="Reporte" nillable="true" type="xs:base64Binary"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:element name="RespuestaDocumento" nillable="true" type="tns:RespuestaDocumento"/>
+</xs:schema>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Framework.Comun.Resultado" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Framework.Comun.Resultado">
+<xs:complexType name="ResultadoExterno">
+<xs:complexContent mixed="false">
+<xs:extension base="tns:BaseResultado">
+<xs:sequence>
+<xs:element minOccurs="0" name="CodigoRespuesta" type="xs:int"/>
+<xs:element minOccurs="0" name="CodigoUnico" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="DescripcionRespuesta" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:element name="ResultadoExterno" nillable="true" type="tns:ResultadoExterno"/>
+<xs:complexType name="BaseResultado">
+<xs:sequence>
+<xs:element minOccurs="0" name="EsValido" type="xs:boolean"/>
+<xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="TipoMensaje" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="BaseResultado" nillable="true" type="tns:BaseResultado"/>
+</xs:schema>
+</wsdl:types>
+<wsdl:message name="IServicioExternoInstitucion_ConsultaDatoPersonaCertificacion_InputMessage">
+<wsdl:part name="parameters" element="tns:ConsultaDatoPersonaCertificacion"/>
+</wsdl:message>
+<wsdl:message name="IServicioExternoInstitucion_ConsultaDatoPersonaCertificacion_OutputMessage">
+<wsdl:part name="parameters" element="tns:ConsultaDatoPersonaCertificacionResponse"/>
+</wsdl:message>
+<wsdl:message name="IServicioExternoInstitucion_ConsultaDatoPersonaEnJson_InputMessage">
+<wsdl:part name="parameters" element="tns:ConsultaDatoPersonaEnJson"/>
+</wsdl:message>
+<wsdl:message name="IServicioExternoInstitucion_ConsultaDatoPersonaEnJson_OutputMessage">
+<wsdl:part name="parameters" element="tns:ConsultaDatoPersonaEnJsonResponse"/>
+</wsdl:message>
+<wsdl:message name="IServicioExternoInstitucion_ConsultaDatoPersonaContrastacion_InputMessage">
+<wsdl:part name="parameters" element="tns:ConsultaDatoPersonaContrastacion"/>
+</wsdl:message>
+<wsdl:message name="IServicioExternoInstitucion_ConsultaDatoPersonaContrastacion_OutputMessage">
+<wsdl:part name="parameters" element="tns:ConsultaDatoPersonaContrastacionResponse"/>
+</wsdl:message>
+<wsdl:message name="IServicioExternoInstitucion_VerificacionImagenDocumentoCi_InputMessage">
+<wsdl:part name="parameters" element="tns:VerificacionImagenDocumentoCi"/>
+</wsdl:message>
+<wsdl:message name="IServicioExternoInstitucion_VerificacionImagenDocumentoCi_OutputMessage">
+<wsdl:part name="parameters" element="tns:VerificacionImagenDocumentoCiResponse"/>
+</wsdl:message>
+<wsdl:message name="IServicioExternoInstitucion_VerificacionImagenDocumentoCie_InputMessage">
+<wsdl:part name="parameters" element="tns:VerificacionImagenDocumentoCie"/>
+</wsdl:message>
+<wsdl:message name="IServicioExternoInstitucion_VerificacionImagenDocumentoCie_OutputMessage">
+<wsdl:part name="parameters" element="tns:VerificacionImagenDocumentoCieResponse"/>
+</wsdl:message>
+<wsdl:message name="IServicioExternoInstitucion_VerificacionImagenDocumentoLic_InputMessage">
+<wsdl:part name="parameters" element="tns:VerificacionImagenDocumentoLic"/>
+</wsdl:message>
+<wsdl:message name="IServicioExternoInstitucion_VerificacionImagenDocumentoLic_OutputMessage">
+<wsdl:part name="parameters" element="tns:VerificacionImagenDocumentoLicResponse"/>
+</wsdl:message>
+<wsdl:message name="IServicioExternoInstitucion_VerificacionImagenDocumentoLice_InputMessage">
+<wsdl:part name="parameters" element="tns:VerificacionImagenDocumentoLice"/>
+</wsdl:message>
+<wsdl:message name="IServicioExternoInstitucion_VerificacionImagenDocumentoLice_OutputMessage">
+<wsdl:part name="parameters" element="tns:VerificacionImagenDocumentoLiceResponse"/>
+</wsdl:message>
+<wsdl:message name="IServicioExternoInstitucion_VerificacionDatoDocumentoCi_InputMessage">
+<wsdl:part name="parameters" element="tns:VerificacionDatoDocumentoCi"/>
+</wsdl:message>
+<wsdl:message name="IServicioExternoInstitucion_VerificacionDatoDocumentoCi_OutputMessage">
+<wsdl:part name="parameters" element="tns:VerificacionDatoDocumentoCiResponse"/>
+</wsdl:message>
+<wsdl:message name="IServicioExternoInstitucion_VerificacionDatoDocumentoCie_InputMessage">
+<wsdl:part name="parameters" element="tns:VerificacionDatoDocumentoCie"/>
+</wsdl:message>
+<wsdl:message name="IServicioExternoInstitucion_VerificacionDatoDocumentoCie_OutputMessage">
+<wsdl:part name="parameters" element="tns:VerificacionDatoDocumentoCieResponse"/>
+</wsdl:message>
+<wsdl:message name="IServicioExternoInstitucion_VerificacionDatoDocumentoLic_InputMessage">
+<wsdl:part name="parameters" element="tns:VerificacionDatoDocumentoLic"/>
+</wsdl:message>
+<wsdl:message name="IServicioExternoInstitucion_VerificacionDatoDocumentoLic_OutputMessage">
+<wsdl:part name="parameters" element="tns:VerificacionDatoDocumentoLicResponse"/>
+</wsdl:message>
+<wsdl:message name="IServicioExternoInstitucion_VerificacionDatoDocumentoLice_InputMessage">
+<wsdl:part name="parameters" element="tns:VerificacionDatoDocumentoLice"/>
+</wsdl:message>
+<wsdl:message name="IServicioExternoInstitucion_VerificacionDatoDocumentoLice_OutputMessage">
+<wsdl:part name="parameters" element="tns:VerificacionDatoDocumentoLiceResponse"/>
+</wsdl:message>
+<wsdl:message name="IServicioExternoInstitucion_VerificacionDatoImagenDocumentoCi_InputMessage">
+<wsdl:part name="parameters" element="tns:VerificacionDatoImagenDocumentoCi"/>
+</wsdl:message>
+<wsdl:message name="IServicioExternoInstitucion_VerificacionDatoImagenDocumentoCi_OutputMessage">
+<wsdl:part name="parameters" element="tns:VerificacionDatoImagenDocumentoCiResponse"/>
+</wsdl:message>
+<wsdl:message name="IServicioExternoInstitucion_VerificacionDatoImagenDocumentoCie_InputMessage">
+<wsdl:part name="parameters" element="tns:VerificacionDatoImagenDocumentoCie"/>
+</wsdl:message>
+<wsdl:message name="IServicioExternoInstitucion_VerificacionDatoImagenDocumentoCie_OutputMessage">
+<wsdl:part name="parameters" element="tns:VerificacionDatoImagenDocumentoCieResponse"/>
+</wsdl:message>
+<wsdl:message name="IServicioExternoInstitucion_VerificacionDatoImagenDocumentoLic_InputMessage">
+<wsdl:part name="parameters" element="tns:VerificacionDatoImagenDocumentoLic"/>
+</wsdl:message>
+<wsdl:message name="IServicioExternoInstitucion_VerificacionDatoImagenDocumentoLic_OutputMessage">
+<wsdl:part name="parameters" element="tns:VerificacionDatoImagenDocumentoLicResponse"/>
+</wsdl:message>
+<wsdl:message name="IServicioExternoInstitucion_VerificacionDatoImagenDocumentoLice_InputMessage">
+<wsdl:part name="parameters" element="tns:VerificacionDatoImagenDocumentoLice"/>
+</wsdl:message>
+<wsdl:message name="IServicioExternoInstitucion_VerificacionDatoImagenDocumentoLice_OutputMessage">
+<wsdl:part name="parameters" element="tns:VerificacionDatoImagenDocumentoLiceResponse"/>
+</wsdl:message>
+<wsdl:message name="IServicioExternoInstitucion_ObtenerDocumentoPorCodigoUnico_InputMessage">
+<wsdl:part name="parameters" element="tns:ObtenerDocumentoPorCodigoUnico"/>
+</wsdl:message>
+<wsdl:message name="IServicioExternoInstitucion_ObtenerDocumentoPorCodigoUnico_OutputMessage">
+<wsdl:part name="parameters" element="tns:ObtenerDocumentoPorCodigoUnicoResponse"/>
+</wsdl:message>
+<wsdl:portType name="IServicioExternoInstitucion">
+<wsdl:operation name="ConsultaDatoPersonaCertificacion">
+<wsdl:input wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/ConsultaDatoPersonaCertificacion" message="tns:IServicioExternoInstitucion_ConsultaDatoPersonaCertificacion_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/ConsultaDatoPersonaCertificacionResponse" message="tns:IServicioExternoInstitucion_ConsultaDatoPersonaCertificacion_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="ConsultaDatoPersonaEnJson">
+<wsdl:input wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/ConsultaDatoPersonaEnJson" message="tns:IServicioExternoInstitucion_ConsultaDatoPersonaEnJson_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/ConsultaDatoPersonaEnJsonResponse" message="tns:IServicioExternoInstitucion_ConsultaDatoPersonaEnJson_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="ConsultaDatoPersonaContrastacion">
+<wsdl:input wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/ConsultaDatoPersonaContrastacion" message="tns:IServicioExternoInstitucion_ConsultaDatoPersonaContrastacion_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/ConsultaDatoPersonaContrastacionResponse" message="tns:IServicioExternoInstitucion_ConsultaDatoPersonaContrastacion_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="VerificacionImagenDocumentoCi">
+<wsdl:input wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionImagenDocumentoCi" message="tns:IServicioExternoInstitucion_VerificacionImagenDocumentoCi_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionImagenDocumentoCiResponse" message="tns:IServicioExternoInstitucion_VerificacionImagenDocumentoCi_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="VerificacionImagenDocumentoCie">
+<wsdl:input wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionImagenDocumentoCie" message="tns:IServicioExternoInstitucion_VerificacionImagenDocumentoCie_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionImagenDocumentoCieResponse" message="tns:IServicioExternoInstitucion_VerificacionImagenDocumentoCie_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="VerificacionImagenDocumentoLic">
+<wsdl:input wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionImagenDocumentoLic" message="tns:IServicioExternoInstitucion_VerificacionImagenDocumentoLic_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionImagenDocumentoLicResponse" message="tns:IServicioExternoInstitucion_VerificacionImagenDocumentoLic_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="VerificacionImagenDocumentoLice">
+<wsdl:input wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionImagenDocumentoLice" message="tns:IServicioExternoInstitucion_VerificacionImagenDocumentoLice_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionImagenDocumentoLiceResponse" message="tns:IServicioExternoInstitucion_VerificacionImagenDocumentoLice_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="VerificacionDatoDocumentoCi">
+<wsdl:input wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoDocumentoCi" message="tns:IServicioExternoInstitucion_VerificacionDatoDocumentoCi_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoDocumentoCiResponse" message="tns:IServicioExternoInstitucion_VerificacionDatoDocumentoCi_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="VerificacionDatoDocumentoCie">
+<wsdl:input wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoDocumentoCie" message="tns:IServicioExternoInstitucion_VerificacionDatoDocumentoCie_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoDocumentoCieResponse" message="tns:IServicioExternoInstitucion_VerificacionDatoDocumentoCie_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="VerificacionDatoDocumentoLic">
+<wsdl:input wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoDocumentoLic" message="tns:IServicioExternoInstitucion_VerificacionDatoDocumentoLic_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoDocumentoLicResponse" message="tns:IServicioExternoInstitucion_VerificacionDatoDocumentoLic_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="VerificacionDatoDocumentoLice">
+<wsdl:input wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoDocumentoLice" message="tns:IServicioExternoInstitucion_VerificacionDatoDocumentoLice_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoDocumentoLiceResponse" message="tns:IServicioExternoInstitucion_VerificacionDatoDocumentoLice_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="VerificacionDatoImagenDocumentoCi">
+<wsdl:input wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoImagenDocumentoCi" message="tns:IServicioExternoInstitucion_VerificacionDatoImagenDocumentoCi_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoImagenDocumentoCiResponse" message="tns:IServicioExternoInstitucion_VerificacionDatoImagenDocumentoCi_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="VerificacionDatoImagenDocumentoCie">
+<wsdl:input wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoImagenDocumentoCie" message="tns:IServicioExternoInstitucion_VerificacionDatoImagenDocumentoCie_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoImagenDocumentoCieResponse" message="tns:IServicioExternoInstitucion_VerificacionDatoImagenDocumentoCie_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="VerificacionDatoImagenDocumentoLic">
+<wsdl:input wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoImagenDocumentoLic" message="tns:IServicioExternoInstitucion_VerificacionDatoImagenDocumentoLic_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoImagenDocumentoLicResponse" message="tns:IServicioExternoInstitucion_VerificacionDatoImagenDocumentoLic_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="VerificacionDatoImagenDocumentoLice">
+<wsdl:input wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoImagenDocumentoLice" message="tns:IServicioExternoInstitucion_VerificacionDatoImagenDocumentoLice_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoImagenDocumentoLiceResponse" message="tns:IServicioExternoInstitucion_VerificacionDatoImagenDocumentoLice_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="ObtenerDocumentoPorCodigoUnico">
+<wsdl:input wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/ObtenerDocumentoPorCodigoUnico" message="tns:IServicioExternoInstitucion_ObtenerDocumentoPorCodigoUnico_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/ObtenerDocumentoPorCodigoUnicoResponse" message="tns:IServicioExternoInstitucion_ObtenerDocumentoPorCodigoUnico_OutputMessage"/>
+</wsdl:operation>
+</wsdl:portType>
+<wsdl:binding name="httpBasicConfig" type="tns:IServicioExternoInstitucion">
+<soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+<wsdl:operation name="ConsultaDatoPersonaCertificacion">
+<soap:operation soapAction="http://tempuri.org/IServicioExternoInstitucion/ConsultaDatoPersonaCertificacion" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="ConsultaDatoPersonaEnJson">
+<soap:operation soapAction="http://tempuri.org/IServicioExternoInstitucion/ConsultaDatoPersonaEnJson" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="ConsultaDatoPersonaContrastacion">
+<soap:operation soapAction="http://tempuri.org/IServicioExternoInstitucion/ConsultaDatoPersonaContrastacion" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="VerificacionImagenDocumentoCi">
+<soap:operation soapAction="http://tempuri.org/IServicioExternoInstitucion/VerificacionImagenDocumentoCi" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="VerificacionImagenDocumentoCie">
+<soap:operation soapAction="http://tempuri.org/IServicioExternoInstitucion/VerificacionImagenDocumentoCie" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="VerificacionImagenDocumentoLic">
+<soap:operation soapAction="http://tempuri.org/IServicioExternoInstitucion/VerificacionImagenDocumentoLic" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="VerificacionImagenDocumentoLice">
+<soap:operation soapAction="http://tempuri.org/IServicioExternoInstitucion/VerificacionImagenDocumentoLice" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="VerificacionDatoDocumentoCi">
+<soap:operation soapAction="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoDocumentoCi" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="VerificacionDatoDocumentoCie">
+<soap:operation soapAction="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoDocumentoCie" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="VerificacionDatoDocumentoLic">
+<soap:operation soapAction="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoDocumentoLic" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="VerificacionDatoDocumentoLice">
+<soap:operation soapAction="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoDocumentoLice" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="VerificacionDatoImagenDocumentoCi">
+<soap:operation soapAction="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoImagenDocumentoCi" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="VerificacionDatoImagenDocumentoCie">
+<soap:operation soapAction="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoImagenDocumentoCie" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="VerificacionDatoImagenDocumentoLic">
+<soap:operation soapAction="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoImagenDocumentoLic" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="VerificacionDatoImagenDocumentoLice">
+<soap:operation soapAction="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoImagenDocumentoLice" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="ObtenerDocumentoPorCodigoUnico">
+<soap:operation soapAction="http://tempuri.org/IServicioExternoInstitucion/ObtenerDocumentoPorCodigoUnico" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+</wsdl:binding>
+<wsdl:service name="ServicioExternoInstitucion">
+<wsdl:port name="httpBasicConfig" binding="tns:httpBasicConfig">
+<soap:address location="http://200.105.134.227:9030/ServicioExternoInstitucion.svc"/>
+</wsdl:port>
+</wsdl:service>
+</wsdl:definitions>

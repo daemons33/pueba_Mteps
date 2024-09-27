@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="unicacitacion" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1568428c-3be5-4a55-9ef1-5099e10e32ab">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<detail>
+		<band height="567" splitType="Stretch">
+			<rectangle radius="15">
+				<reportElement mode="Transparent" x="10" y="10" width="552" height="371" uuid="9465ed24-36ee-493f-9e07-7bf41eada655"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="290" y="10" width="270" height="50" uuid="b6fdda5e-141b-4af3-900d-a5266cc0b22f"/>
+				<textElement>
+					<font size="33"/>
+				</textElement>
+				<text><![CDATA[ÚNICA CITACIÓN]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,56 @@
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+release.properties
+HELP.md
+.factorypath
+
+# Spring Boot
+*.log
+logs/
+build/
+out/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+*.classpath
+*.project
+*.settings/
+.settings/
+.springBeans
+
+# Eclipse
+bin/
+tmp/
+tmp2/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+
+# Intellij
+out/
+
+# Mac
+.DS_Store
+
+# Gradle
+.gradle/
+build/
+
+# Misc
+*.class
+*.jar
+*.war
+*.zip
+*.tar.gz
+*.rar
+*.bat
+*.bak
+*.log

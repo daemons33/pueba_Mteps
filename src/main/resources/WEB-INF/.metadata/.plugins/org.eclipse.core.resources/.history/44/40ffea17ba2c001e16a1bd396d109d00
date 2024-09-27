@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="prefiniquito" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="01e7f941-17b4-4161-8094-a580ccc7dc1e">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="usuario" class="java.lang.String"/>
+	<parameter name="nombreTrabajador" class="java.lang.String"/>
+	<parameter name="fechaIngreso" class="java.lang.String"/>
+	<parameter name="fechaRetiro" class="java.lang.String"/>
+	<parameter name="razonSocial" class="java.lang.String"/>
+	<parameter name="tiempoTrabajadoAnio" class="java.lang.Integer"/>
+	<parameter name="tiempoTrabajadoDia" class="java.lang.Integer"/>
+	<parameter name="tiempoTrabajadoMes" class="java.lang.Integer"/>
+	<parameter name="aguinaldoDias" class="java.lang.Integer"/>
+	<parameter name="aguinaldoMeses" class="java.lang.Integer"/>
+	<parameter name="indemnizacionDias" class="java.lang.Integer"/>
+	<parameter name="tiempoTrabajoDias" class="java.lang.Integer"/>
+	<parameter name="vacacionesGestion" class="java.lang.Integer"/>
+	<parameter name="indemnizacionAnios" class="java.lang.Integer"/>
+	<parameter name="indemnizacionMeses" class="java.lang.Integer"/>
+	<parameter name="tiempoTrabajoAnios" class="java.lang.Integer"/>
+	<parameter name="tiempoTrabajoMeses" class="java.lang.Integer"/>
+	<parameter name="total" class="java.lang.Double"/>
+	<parameter name="otros1" class="java.lang.Double"/>
+	<parameter name="otros2" class="java.lang.Double"/>
+	<parameter name="otros3" class="java.lang.Double"/>
+	<parameter name="desahucio" class="java.lang.Double"/>
+	<parameter name="bonoAntiguedad" class="java.lang.Double"/>
+	<parameter name="sueldoPromedio" class="java.lang.Double"/>
+	<parameter name="aguinaldoDiasMonto" class="java.lang.Double"/>
+	<parameter name="aguinaldoMesesMonto" class="java.lang.Double"/>
+	<parameter name="indemnizacionDiasMonto" class="java.lang.Double"/>
+	<parameter name="indemnizacionAniosMonto" class="java.lang.Double"/>
+	<parameter name="indemnizacionMesesMonto" class="java.lang.Double"/>
+	<parameter name="vacacionesDuodecimasMonto" class="java.lang.Double"/>
+	<parameter name="concepto1" class="java.lang.String"/>
+	<parameter name="concepto2" class="java.lang.String"/>
+	<parameter name="concepto3" class="java.lang.String"/>
+	<parameter name="vacacionesDias" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="0" width="570" height="79" uuid="f10e0e2c-3834-473a-ac88-8599ff37840b"/>
+			</rectangle>
+			<image hAlign="Center">
+				<reportElement x="10" y="10" width="120" height="65" uuid="f5cd91e4-4a96-47bd-95a8-dec04c36464e">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA["WEB-INF/escudobol.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="96" y="26" width="380" height="33" uuid="d49e1926-ce69-44e7-96f3-2ff47d672f74"/>
+				<textElement textAlignment="Center">
+					<font size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PRELIQUIDACIÓN O PREFINIQUITO]]></text>
+			</staticText>
+			<image hAlign="Center">
+				<reportElement x="470" y="8" width="70" height="70" uuid="81fae429-10e1-44d5-b808-258ae35985ff">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA["WEB-INF/logo-mteps.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="130" splitType="Stretch">
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="10" width="570" height="110" uuid="1054cfca-3825-44a5-b079-a327d4441130"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="10" y="15" width="160" height="15" uuid="0bcce938-feb0-4fd5-9898-d5cc876b3aa0"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOMBRE DEL TRABAJADOR:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="30" width="200" height="15" uuid="bdbeb3ca-9a99-4139-9b6a-42a2f320ab3c"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[RAZON SOCIAL DEL EMPLEADOR:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="45" width="120" height="15" uuid="daf2511b-68cc-4795-9fb1-d048c03f7ec8"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[FECHA DE INGRESO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="60" width="110" height="15" uuid="47026952-4e84-40ee-949d-e4811f64bad0"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[FECHA DE RETIRO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="75" width="120" height="15" uuid="3a8846bc-1c15-433f-b2b9-398f4e0790d6"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TIEMPO DE TRABAJO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="104" width="180" height="15" uuid="f9e962c7-a379-49a0-84ab-ee97d35c453e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[SUELDO PROMEDIO (Bs):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="75" width="40" height="15" uuid="3cb16ae9-8fbe-4f53-8404-726c27428950"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Años:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="210" y="75" width="40" height="15" uuid="0228ae74-bd12-4e8d-80e4-216aed233e0d"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Meses:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="75" width="40" height="15" uuid="e68392ca-4705-472a-95d6-9786e7f25214"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Días:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="159" y="15" width="255" height="13" uuid="c4286bea-aea1-475f-bca9-817f67c9aab9"/>
+				<textFieldExpression><![CDATA[$P{nombreTrabajador}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="182" y="30" width="372" height="13" uuid="e753148d-20a0-412e-b236-cbf2165fd920"/>
+				<textFieldExpression><![CDATA[$P{razonSocial}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="120" y="45" width="180" height="13" uuid="0bbd8880-cab0-44f9-b1eb-5ecc514214cb"/>
+				<textFieldExpression><![CDATA[$P{fechaIngreso}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="120" y="59" width="180" height="13" uuid="bd435e2e-a00e-4391-a826-ee0bedfaa31b"/>
+				<textFieldExpression><![CDATA[$P{fechaRetiro}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="180" y="75" width="30" height="13" uuid="7802a0a8-f418-4e5c-9d28-b9515ffdbda2"/>
+				<textFieldExpression><![CDATA[$P{tiempoTrabajoAnios}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="250" y="75" width="30" height="13" uuid="03ca9cd4-30fc-427c-9f3d-224e82751d6c"/>
+				<textFieldExpression><![CDATA[$P{tiempoTrabajoMeses}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="310" y="75" width="30" height="13" uuid="87461ec5-8421-471b-917a-354c0fd2a2b8"/>
+				<textFieldExpression><![CDATA[$P{tiempoTrabajoDias}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="143" y="104" width="156" height="14" uuid="4c61b00e-7e37-403d-a43b-f28a001de840"/>
+				<textFieldExpression><![CDATA[$P{sueldoPromedio}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="90" width="180" height="15" uuid="5b99d387-31c8-4f88-a4d7-62b67f0c8aec"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[BONO ANTIGUEDAD:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="119" y="90" width="66" height="14" uuid="24d1a91f-4b96-4d75-bb43-aa0c14d75866"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{bonoAntiguedad}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="191" y="90" width="40" height="15" uuid="c3109d61-2539-4fcb-a772-2efdfb8c122e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bs]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="328" splitType="Stretch">
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="1" width="570" height="318" uuid="7c5020f2-0c59-45f3-8935-beea4d98ba86"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="38" y="9" width="160" height="15" uuid="16466d7b-746b-49af-8f66-a268635e5a2c"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DESAHUCIO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="38" y="26" width="160" height="15" uuid="70a03f52-8550-4cdb-8aa8-b24f038a4576"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[INDEMNIZACIÓN:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="38" y="80" width="160" height="15" uuid="3b389dab-49dc-4593-a75b-4bd2ea4db330"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[AGUINALDO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="38" y="125" width="160" height="15" uuid="4a47c3df-be31-4608-b83f-6e32d13e0e4e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[VACACIONES:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="38" y="147" width="160" height="15" uuid="d0b84c1d-966e-415e-8f3f-65f3f573b5d4"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[OTROS:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="38" y="214" width="160" height="15" uuid="bae94b72-a8d4-4989-a6b9-0eb2e44c3520"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="302" width="210" height="15" forecolor="#FF0C08" uuid="18370e01-a95a-405f-b48e-5585ec4547df"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nota: Este cálculo no causa estado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="445" y="9" width="30" height="15" uuid="a965cb20-ce61-4d8e-bc14-349ac8a965cc"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bs]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="445" y="26" width="30" height="15" uuid="9d069f48-6c18-478f-b51f-59a32792594f"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bs]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="306" y="26" width="40" height="15" uuid="7d0a6a98-686e-44c5-bfc0-70f2cc96ffb7"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Años]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="306" y="41" width="40" height="15" uuid="1526b6b7-5ada-4f61-b9e2-a958afb97da3"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Meses]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="306" y="56" width="40" height="15" uuid="f5873979-6866-4131-9795-579f94e14852"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Días]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="445" y="41" width="30" height="15" uuid="48c62b38-08af-4137-97b1-8d07e7b59f81"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bs]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="445" y="56" width="30" height="15" uuid="d0d1162a-f89e-46e2-8401-28f7512b544e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bs]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="306" y="80" width="40" height="15" uuid="96748dcc-4a2a-47c2-b11a-4295be8ac3e5"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Meses]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="306" y="95" width="40" height="15" uuid="bf01d198-3c78-4ce7-bc87-02523edebaa1"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Días]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="445" y="80" width="30" height="15" uuid="4bab06b4-d60c-4cf2-b76c-9d88897bfa35"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bs]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="445" y="95" width="30" height="15" uuid="3e141f15-397b-4231-835b-d7c8a7fac6ea"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bs]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="445" y="125" width="30" height="15" uuid="f19c831f-4261-4c0c-b40d-1ef6d35430cc"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bs]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="445" y="147" width="30" height="15" uuid="2c8873be-62ea-46ce-b99d-53936aaae5ac"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bs]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="445" y="162" width="30" height="15" uuid="a756b1da-dc28-4c8e-98a8-872c3fd6b25a"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bs]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="445" y="183" width="30" height="15" uuid="d65b81a8-5565-45e7-9517-cb9bf89a8473"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bs]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="215" width="30" height="15" uuid="cf2d7fcf-c48a-4406-a8b8-89b71e471bcf"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bs]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="290" width="160" height="15" uuid="354458f2-dd4f-4f8b-b1a2-b3e26d5ad66d"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[SELLO Y FIRMA]]></text>
+			</staticText>
+			<line>
+				<reportElement x="400" y="280" width="161" height="1" uuid="6490e65c-2864-4da8-b108-09d1af840a55"/>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="372" y="9" width="70" height="16" uuid="8d2cbf74-9571-4dd4-806b-468bf32bb4c1"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{desahucio}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="237" y="56" width="65" height="15" uuid="86028ef5-16bd-4199-8547-08108daf5d57"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{indemnizacionDias}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="237" y="41" width="65" height="15" uuid="b3603f15-99dd-4483-bc34-bef1c39bed7f"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{indemnizacionMeses}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="237" y="26" width="65" height="15" uuid="af54691d-7a9b-42f8-824b-51224faaa28a"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{indemnizacionAnios}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="382" y="56" width="60" height="15" uuid="cf26e5d7-558a-4b23-b555-28a7716f3488"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{indemnizacionDiasMonto}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="382" y="41" width="60" height="15" uuid="14e8e497-2908-462a-82fe-2527a71d09b1"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{indemnizacionMesesMonto}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="375" y="26" width="67" height="15" uuid="811bb091-0663-426e-923f-3145a964e153"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{indemnizacionAniosMonto}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="237" y="95" width="65" height="15" uuid="1b91e509-ec4c-4e36-afe2-1f2157c71dd9"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{aguinaldoDias}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="379" y="95" width="63" height="15" uuid="600e90a6-4a3a-45e7-bc6d-6684fd52eb6f"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{aguinaldoDiasMonto}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="380" y="80" width="62" height="15" uuid="8010540c-0c38-4b18-8f54-7e7d20ddfca6"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{aguinaldoMesesMonto}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="382" y="125" width="60" height="15" uuid="1cd69282-ab87-46ba-8edd-a84359646465"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{vacacionesDuodecimasMonto}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="342" y="147" width="100" height="15" uuid="27611a74-792d-43fa-88cc-ca0598e9890b"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{otros1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="342" y="162" width="100" height="15" uuid="cc74ea89-e1ab-4cd4-afe2-38a68cb0c27e"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{otros2}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="342" y="183" width="100" height="15" uuid="697d5c96-73d5-451b-ad2b-eab29e2b203b"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{otros3}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement x="341" y="215" width="100" height="14" uuid="22379ce8-0659-4e7a-9ca6-0cd4595652d5"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{total}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="238" y="80" width="64" height="14" uuid="003e6d12-5bb3-4519-ad07-426c10c0267b"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{aguinaldoMeses}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="38" y="182" width="160" height="15" uuid="e559fc27-0778-4d46-82df-09a6df8084ed"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DESCUENTOS:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="143" y="147" width="246" height="15" uuid="d5fe84e8-bb43-46b9-887c-4d4fc32e7f97"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[$P{concepto1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="143" y="162" width="246" height="15" uuid="f695426f-d8ea-473a-afa2-ecfdebca89e5"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[$P{concepto2}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="143" y="183" width="246" height="15" uuid="db346d7a-ed2f-4229-87ef-61e7bde02ebc"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[$P{concepto3}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="238" y="125" width="65" height="15" uuid="fe829fe5-94fc-4c06-9394-b4336ae97dc6"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{vacacionesDias}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="307" y="125" width="40" height="15" uuid="f2baa740-0652-4f92-8d25-c05cc6265f95"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Días]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="102" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="11" width="460" height="15" forecolor="#FF0900" backcolor="#D10C08" uuid="136dd100-5a4a-4b71-a4e5-a5a9d00321a3"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[(!*!) CALCULO SEGÚN LOS DATOS PROPORCIONADOS POR EL/LA TRABAJADOR (A) ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="30" width="560" height="70" uuid="840aa746-4350-42eb-ba57-4148593980c6"/>
+				<text><![CDATA[D.S. Nº 28699 de 1-May-2006
+Plazo para pago de beneficios sociales: 15 días
+Articulo 9.-
+II. En caso de que el empleador incumpla su obligación en el plazo establecido en el presente articulo, pagará una multa en beneficio del trabajador consistente en el 30% del monto total a cancelarse, incluyendo mantenimiento de valor (UFVs).]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>

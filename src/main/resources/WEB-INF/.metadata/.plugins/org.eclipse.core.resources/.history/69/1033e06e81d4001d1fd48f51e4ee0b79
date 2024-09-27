@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Reporte_Compobante" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="30ce7fd3-7070-4614-b894-d932ee75519b">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<subDataset name="ReporteTramite" uuid="88645587-dc2d-4348-bdb9-bd4292cbdd72">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<parameter name="razonSocial" class="java.lang.String"/>
+	<parameter name="nroPatronal" class="java.lang.String"/>
+	<parameter name="nit" class="java.lang.String"/>
+	<parameter name="usuario" class="java.lang.String"/>
+	<parameter name="montoLiteral" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="codigoTramite" class="java.lang.String"/>
+	<field name="tramite" class="java.lang.String"/>
+	<field name="montoTotalMulta" class="java.lang.Double"/>
+	<field name="detalleFiniquito" class="java.lang.String"/>
+	<field name="observacion" class="java.lang.String"/>
+	<field name="fechaDeposito" class="java.sql.Date"/>
+	<field name="nroDeposito" class="java.lang.String"/>
+	<field name="montoDeposito" class="java.lang.Double"/>
+	<field name="nurSigec" class="java.lang.String"/>
+	<field name="fechaCreacion" class="java.sql.Date"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="80" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="10" width="190" height="50" uuid="053cce45-342a-4777-9d85-9cff90d7943a"/>
+				<imageExpression><![CDATA["WEB-INF/tramites/Logo2.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="190" y="7" width="210" height="62" uuid="fa31a89f-cc0a-48d1-9599-4f32aabdcdbd"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[COMPROBANTE DE DEPOSITO
+ORIGINAL CLIENTE ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="417" y="0" width="60" height="70" uuid="e7c62533-bf01-4307-a126-fda8ec2c891e"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Nº Tramite:
+Nº H.R.:
+Usuario:
+Original:
+Reimpresión:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="481" y="-1" width="105" height="15" uuid="fddb4fc4-bdcd-4738-a1a8-dc628fa23532">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoTramite}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="481" y="9" width="105" height="15" uuid="d79b6d78-8bf8-42a2-be19-80621f0962f9">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nurSigec}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE, dd-MM-yyyy" isBlankWhenNull="true">
+				<reportElement x="481" y="39" width="106" height="28" uuid="17be0963-2917-4dc6-a0c1-8fb1b1ba474b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="481" y="29" width="105" height="20" uuid="1373b0ce-521f-4103-a39f-1a48754f3265">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fechaCreacion}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="481" y="19" width="105" height="12" uuid="d6689a5e-b7bd-4b46-b1e8-0290a96367ad">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{usuario}]]></textFieldExpression>
+				<patternExpression><![CDATA[$P{usuario}]]></patternExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="24" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="360" height="19" uuid="4c681745-5d80-46cf-a6e1-9a0f40239a16"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CUENTA DEL MINISTERIO DE TRABAJO, EMPLEO Y PREVISIÓN SOCIAL:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="361" y="0" width="156" height="19" uuid="5926a255-fae6-414c-8e0b-7e83a2d8898e"/>
+				<text><![CDATA[Banco Unión 1-6036425]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="66" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="163" height="16" uuid="f0af2a5a-21c1-4652-8bc9-47a41353a032"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATOS DEL DEPOSITANTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="15" width="119" height="15" uuid="678a0564-4fe6-4ce8-802d-19b2885b6aa4"/>
+				<text><![CDATA[Nombre o Razón Social:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="30" width="39" height="15" uuid="1b42da75-d2dc-401b-a2bb-066e5f6bbe28"/>
+				<text><![CDATA[Nº NIT:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="260" y="30" width="60" height="15" uuid="be54f5c8-1f0a-431c-b329-f3d38a6c0f55"/>
+				<text><![CDATA[Nº Patronal:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-1" y="45" width="163" height="16" uuid="bd26eea7-2b46-4990-8be3-bc8179aaaabd"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATOS DEL DEPÓSITO]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="114" y="15" width="458" height="14" uuid="842b3da6-29fe-4959-97b3-6acee8249723">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{razonSocial}]]></textFieldExpression>
+				<patternExpression><![CDATA[$P{usuario}]]></patternExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="39" y="30" width="180" height="19" uuid="4068e7fc-65a4-4363-accd-a157f6d07d93">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nit}]]></textFieldExpression>
+				<patternExpression><![CDATA[$P{usuario}]]></patternExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="320" y="30" width="170" height="19" uuid="296e22f3-a0a4-4cc2-a0be-eef7ae5c4a1a">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nroPatronal}]]></textFieldExpression>
+				<patternExpression><![CDATA[$P{usuario}]]></patternExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="211" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="-4" width="70" height="20" uuid="34d1cc7a-cd6a-4060-a08c-03ba9a65494f"/>
+				<box padding="1">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Fecha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="-4" width="69" height="20" uuid="406866c9-7032-4218-9d42-0bd50bed6a7d"/>
+				<box padding="1">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Sucursal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="139" y="-4" width="260" height="20" uuid="6918f75b-af8a-471c-8954-8049b3d5067d"/>
+				<box padding="1">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Concepto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="490" y="-4" width="78" height="20" uuid="e710f194-e96d-440b-85fc-30e4c1485c26"/>
+				<box padding="1">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Monto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="88" width="163" height="16" uuid="de042d75-6071-46d1-a215-39903769adcf"/>
+				<text><![CDATA[Son:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="259" y="141" width="309" height="38" uuid="d7a6be45-abe0-42e1-8f79-95440d451ff1"/>
+				<box padding="1">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="141" width="259" height="38" uuid="403db7ac-74a0-4085-999e-5943f8cee6e9"/>
+				<box padding="1">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="179" width="259" height="28" uuid="d62f68ab-a71c-4763-8f30-9884c76a6c55"/>
+				<box padding="1">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[FIRMA DEL DEPOSITANTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="259" y="179" width="309" height="28" uuid="4ec88ac9-74a5-402d-8cf5-5a5609756c2a"/>
+				<box padding="1">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[SELLO Y FIRMA
+VENTANILLA UNICA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="65" width="490" height="20" uuid="c2d72f06-a54c-4202-845e-094ec98dfd84"/>
+				<box padding="1">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[TOTAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="399" y="-4" width="91" height="20" uuid="b798bc8f-4373-4df1-a654-40b991ce7818"/>
+				<box padding="1">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Nº de Operación]]></text>
+			</staticText>
+			<textField pattern="M/d/yyyy" isBlankWhenNull="true">
+				<reportElement x="0" y="16" width="70" height="49" uuid="80642771-95fe-4339-bd88-5ce6ef7a56a9"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{fechaDeposito}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="70" y="16" width="69" height="49" uuid="94ddb675-53b4-406f-bcd3-3fc1d3936143"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[1]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="139" y="16" width="260" height="49" uuid="a9d7ac55-6b4b-45b0-94ec-9bfb8e725ed7"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tramite}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="399" y="16" width="91" height="49" uuid="71830145-9bc6-4be3-b039-e60eebd142ba"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nroDeposito}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00#;#,##0.00#-" isBlankWhenNull="true">
+				<reportElement x="490" y="16" width="78" height="49" uuid="84ed8d6b-6481-40aa-8976-7a473a9799ac"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{montoDeposito}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00#;#,##0.00#-" isBlankWhenNull="true">
+				<reportElement x="490" y="65" width="78" height="20" uuid="66c5f867-bffd-4c3c-bcb9-d809442d42ee"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{montoDeposito}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="23" y="88" width="517" height="15" uuid="6d1e560c-1fde-49b9-97cc-2a1015d5cf19"/>
+				<text><![CDATA[Bs.- $F{montoDeposito} ($P{montoLiteral} Bolivianos)]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="105" width="568" height="35" uuid="b7e63bee-084f-4536-a123-c2210cbd96c5"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA["Observación: "+($F{observacion}==null?"":$F{observacion})]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="338">
+			<staticText>
+				<reportElement x="-11" y="0" width="630" height="16" uuid="56b8fafe-7776-4679-8976-f0f77871b98a"/>
+				<text><![CDATA[.................................................................................................................................................................................................................................]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="17" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>
